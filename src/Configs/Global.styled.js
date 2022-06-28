@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     font-family: Open-Sans, Helvetica, Sans-Serif, serif;
     scroll-behavior: smooth;
-    background: ${baseTheme.colors.gradDuLLBlue};
+    background: ${baseTheme.colors.gradDullBlue};
   }
 
   #root {

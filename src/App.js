@@ -5,19 +5,16 @@ import Cart from "./Cart/Cart";
 import Logs from "./Logs/Logs";
 import Header from "./Header/Header";
 import React from "react";
-
-const main = "/"
-const cart = "/cart"
-const logs = "/logs"
+import {MAIN, CART, LOGS} from "./Configs/constant";
 
 function App() {
   return (
     <div>
         <Header/>
       <Routes>
-        <Route exact path={main} element={<MainPage/>}/>
-        <Route exact path={cart} element={<Cart/>}/>
-        <Route exact path={logs} element={<Logs/>}/>
+        <Route exact path={MAIN} element={<MainPage/>}/>
+        <Route exact path={CART} element={<Cart/>}/>
+        <Route exact path={LOGS} element={<Logs/>}/>
       </Routes>
     </div>
   );

@@ -8,7 +8,7 @@ export const UpperHeader = styled.div`
   min-height: 70px;
   display: flex;
   justify-content: space-between;
-  box-shadow: 0 5px 10px 0 ${baseTheme.colors.Black};
+  box-shadow: 0 5px 10px 0 ${baseTheme.colors.black};
 `
 
 
