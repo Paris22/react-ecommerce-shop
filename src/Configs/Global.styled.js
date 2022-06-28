@@ -1,21 +1,30 @@
-import { createGlobalStyle } from "styled-components"
+import styled, {createGlobalStyle} from "styled-components"
+import {baseTheme} from "./BaseTheme.styled";
 
 export const GlobalStyle = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   html {
     height: 100vh;
   }
+
   body {
-    margin: 0;
-    padding: 0;
     min-height: 100vh;
-    font-family:Open-Sans, Helvetica, Sans-Serif, serif;
-    box-sizing: border-box;
+    font-family: Open-Sans, Helvetica, Sans-Serif, serif;
     scroll-behavior: smooth;
-    background: rgb(190,242,245);
-    background: radial-gradient(circle, rgba(190,242,245,1) 0%, rgba(238,251,248,1) 100%);
+    background: ${baseTheme.colors.gradDuLLBlue};
   }
+
   #root {
     min-height: 100vh;
     padding: 25px;
   }
+`
+
+export const MarginHeader = styled.div`
+  margin: 10px;
 `
