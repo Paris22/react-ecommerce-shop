@@ -1,9 +1,10 @@
 import React from 'react';
+import Image from "mui-image";
 
 const Card = () => {
     return (
         <div>
-            Card
+            <Image src="" alt="Card-Image"/>
         </div>
     );
 };
