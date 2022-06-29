@@ -6,7 +6,7 @@ import {FlexTheme} from "../Configs/DirectionTheme.styled";
 import {
     UpperHeader
 } from "./Header.styled";
-import {MarginHeader} from "../Configs/Global.styled";
+import {MarginWrapper} from "../Configs/Global.styled";
 import Logo from "../img/Logo.png"
 import Image from "mui-image";
 import {CART, MAIN} from "../Configs/constant";
@@ -24,7 +24,7 @@ const Header = () => {
                 </Button>
             </FlexTheme>
             <FlexTheme align='center'>
-                <MarginHeader>
+                <MarginWrapper>
                     <ButtonGroup variant="outlined"
                                  size="small"
                                  aria-label="outlined button group"
@@ -32,18 +32,18 @@ const Header = () => {
                         <Button>Sort by price</Button>
                         <Button>Sort by name</Button>
                     </ButtonGroup>
-                </MarginHeader>
-                <MarginHeader>
+                </MarginWrapper>
+                <MarginWrapper>
                     <ButtonGroup variant="text" aria-label="text button group">
                         <Button>USD</Button>
                         <Button>EUR</Button>
                         <Button>CAD</Button>
                     </ButtonGroup>
-                </MarginHeader>
+                </MarginWrapper>
                 <Button component={Link} to={CART} variant="text" size="small">Total in cart</Button>
-                <MarginHeader>
+                <MarginWrapper>
                     Total Amount
-                </MarginHeader>
+                </MarginWrapper>
             </FlexTheme>
         </UpperHeader>
     );

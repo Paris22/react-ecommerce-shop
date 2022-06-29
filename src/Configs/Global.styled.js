@@ -25,6 +25,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 `
 
-export const MarginHeader = styled.div`
-  margin: 10px;
+export const MarginWrapper = styled.div`
+  margin: 15px;
+`
+
+export const PaddingWrapper = styled.div`
+  padding: 20px;
 `
