@@ -5,7 +5,7 @@ import App from './App';
 import {BrowserRouter} from "react-router-dom";
 import {GlobalStyle} from "./Configs/Global.styled";
 import {ThemeProvider} from "styled-components";
-import {baseTheme} from "./Configs/BaseTheme.styled";
+import {baseTheme} from "./Configs/BaseTheme";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
