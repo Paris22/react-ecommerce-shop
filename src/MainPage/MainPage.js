@@ -3,7 +3,7 @@ import Card from "../Cards/Card";
 import Image from "mui-image";
 import {Input} from "@mui/material";
 import {MarginWrapper, PaddingWrapper} from "../Configs/Global.styled";
-import {FlexTheme} from "../Configs/DirectionTheme.styled";
+import {FlexWrapper} from "../Configs/FlexTheme.styled";
 import {Grid} from "@mui/material";
 import Search from "../img/search.svg"
 
@@ -13,20 +13,25 @@ const MainPage = () => {
     return (
         <div className="Content">
             <MarginWrapper>
-                    <h1>Все товары</h1>
-                    <PaddingWrapper>
-                        <FlexTheme align="center">
-                            <Image src={Search} height={25} width={25} alt="SearchButton"/>
-                            <MarginWrapper>
-                                <Input placeholder="Поиск..."/>
-                            </MarginWrapper>
-                        </FlexTheme>
-                    </PaddingWrapper>
-                <Grid container rowSpacing={3} columnSpacing={3}>
+                <h1>Все товары</h1>
+                <PaddingWrapper>
+                    <FlexWrapper align="center">
+                        <Image
+                            src={Search}
+                            height={25}
+                            width={25}
+                            alt="SearchButton"/>
+                        <MarginWrapper>
+                            <Input placeholder="Поиск..."/>
+                        </MarginWrapper>
+                    </FlexWrapper>
+                </PaddingWrapper>
+                <Grid
+                    container spacing={{xs: 2, md: 3}}
+                    columns={{xs: 4, sm: 8, md: 12}}
+                >
                     {Array.from(Array(N)).map((_, i) => (
-                        <Grid item xs={6} sm={2} md={2} key={i}>
-                            <Card/>
-                        </Grid>
+                        <Card index = {i}/>
                     ))}
                 </Grid>
             </MarginWrapper>

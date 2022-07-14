@@ -1,5 +1,5 @@
 import styled, {createGlobalStyle} from "styled-components"
-import {baseTheme} from "./BaseTheme.styled";
+import {baseTheme} from "./BaseTheme";
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -30,5 +30,5 @@ export const MarginWrapper = styled.div`
 `
 
 export const PaddingWrapper = styled.div`
-  padding: 20px;
+  padding: ${props => props.padding}
 `
