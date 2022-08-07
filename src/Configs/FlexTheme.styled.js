@@ -16,3 +16,12 @@ export const FlexWrapperDirection = styled(FlexWrapper)`
   }
 `
 
+export const FlexWrapperCard = styled(FlexWrapper)`
+  flex-direction: ${props => props.direction};
+`
+
+export const FlexGrowWrapper = styled.div`
+  display: flex;
+  flex-grow: 1;
+`
+

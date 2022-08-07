@@ -8,11 +8,12 @@ import {
     LogoImageWidth
 } from "./Header.styled";
 import {MarginWrapper} from "../Configs/Global.styled";
-import Logo from "../img/Logo.png"
+import Logo from "../img/logo.png"
 import Image from "mui-image";
-import {CART, MAIN} from "../Configs/constant";
+import {CART, MAIN} from "../Configs/constants";
 
 const Header = () => {
+    
     return (
         <UpperHeader>
             <LogoImageWidth>
@@ -21,12 +22,14 @@ const Header = () => {
                     justify='center'
                     direction='row'
                 >
-                    <Image
-                        src={Logo}
-                        height={75}
-                        width={75}
-                        alt="Logo"
-                    />
+                    <Link to={MAIN}>
+                        <Image
+                            src={Logo}
+                            height={75}
+                            width={75}
+                            alt="Logo"
+                        />
+                    </Link>
                     <Button
                         component={Link}
                         to={MAIN}

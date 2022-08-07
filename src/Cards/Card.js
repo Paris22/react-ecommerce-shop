@@ -1,12 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Image from "mui-image";
 import Button from "@mui/material/Button";
-import {FlexWrapper, FlexWrapperDirection} from "../Configs/FlexTheme.styled";
+import {FlexWrapper, FlexWrapperCard, FlexWrapperDirection} from "../Configs/FlexTheme.styled";
 import {CardWrapper} from "./Card.styled";
-import {PaddingWrapper} from "../Configs/Global.styled";
+import {BoldText} from "../Configs/Global.styled";
 import {Grid} from "@mui/material";
 
 const Card = ({index}) => {
+
+    const [productAmount, setProductAmount] = useState(0)
+
+    const addProduct = () => {
+        setProductAmount(prevProductAmount => prevProductAmount + 1)
+    }
+
     return (
         <Grid item
               xs={2}
@@ -26,24 +33,26 @@ const Card = ({index}) => {
                         alt="Card-Image"
                     />
                 </FlexWrapper>
-                <span>ProductName</span>
+                <BoldText>ProductName</BoldText>
                 <FlexWrapperDirection
                     justify="space-between"
                     direction='column'
                 >
                     <FlexWrapper>
-                        <span>Цена: <b>499р.</b></span>
+                        <FlexWrapperCard direction='column'>
+                            <BoldText>Цена: 499р.</BoldText>
+                            <BoldText>Кол-во: {productAmount}</BoldText>
+                        </FlexWrapperCard>
                     </FlexWrapper>
-                    <PaddingWrapper padding='10px'>
-                        <FlexWrapper justify='center'>
-                            <Button
-                                variant="outlined"
-                                size="small"
-                            >
-                                Добавить
-                            </Button>
-                        </FlexWrapper>
-                    </PaddingWrapper>
+                    <FlexWrapper align='flex-end' justify='center'>
+                        <Button
+                            variant="outlined"
+                            size="small"
+                            onClick={addProduct}
+                        >
+                            Добавить
+                        </Button>
+                    </FlexWrapper>
                 </FlexWrapperDirection>
             </CardWrapper>
         </Grid>
